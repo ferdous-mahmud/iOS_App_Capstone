@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1AEBD529DCBFBF009390AC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */; };
 		0CC7607929D83A6300744D77 /* Little_LemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7607829D83A6300744D77 /* Little_LemonApp.swift */; };
-		0CC7607B29D83A6300744D77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC7607A29D83A6300744D77 /* ContentView.swift */; };
 		0CC7607D29D83A6400744D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC7607C29D83A6400744D77 /* Assets.xcassets */; };
 		0CC7608029D83A6400744D77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC7607F29D83A6400744D77 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Little-Lemon-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0CC7607529D83A6300744D77 /* Little Lemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC7607829D83A6300744D77 /* Little_LemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonApp.swift; sourceTree = "<group>"; };
-		0CC7607A29D83A6300744D77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0CC7607C29D83A6400744D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CC7607F29D83A6400744D77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,8 +52,9 @@
 		0CC7607729D83A6300744D77 /* Little Lemon */ = {
 			isa = PBXGroup;
 			children = (
+				0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */,
 				0CC7607829D83A6300744D77 /* Little_LemonApp.swift */,
-				0CC7607A29D83A6300744D77 /* ContentView.swift */,
+				0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */,
 				0CC7607C29D83A6400744D77 /* Assets.xcassets */,
 				0CC7607E29D83A6400744D77 /* Preview Content */,
 			);
@@ -137,8 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC7607B29D83A6300744D77 /* ContentView.swift in Sources */,
 				0CC7607929D83A6300744D77 /* Little_LemonApp.swift in Sources */,
+				0C1AEBD529DCBFBF009390AC /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +272,7 @@
 				DEVELOPMENT_TEAM = R5L2HQWCVA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Little-Lemon-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +301,7 @@
 				DEVELOPMENT_TEAM = R5L2HQWCVA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Little-Lemon-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
