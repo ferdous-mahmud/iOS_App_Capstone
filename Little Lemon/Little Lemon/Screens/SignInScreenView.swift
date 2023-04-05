@@ -14,14 +14,11 @@ struct SignInScreenView: View {
     
     var body: some View {
         VStack{
-            
-            
             Spacer()
             Image("SignIn")
                 .resizable()
                 .scaledToFit()
             Spacer()
-            
             Group{
                 TextField("First Name", text: $firstName)
                     .font(.title3)
@@ -48,8 +45,30 @@ struct SignInScreenView: View {
                     .cornerRadius(50)
                     .padding(.horizontal)
                 
-                SignInButton(destinationView: MainScreenView())
-                    .padding()
+                
+//            TODO: save userDefaults when navigationlink tapped
+                
+                NavigationLink {
+                    MainScreenView()
+                } label: {
+                    Text("Sign In")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("PrimaryColor2"))
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color("PrimaryColor1"))
+                        .cornerRadius(50)
+                        .padding()
+//                        .onTapGesture(perform: {
+//                            UserDefaults.standard.set(firstName, forKey: "firstName")
+//                            UserDefaults.standard.set(lastName, forKey: "lastName")
+//                            UserDefaults.standard.set(email, forKey: "email")
+//                            print("UserDefaults Added")
+//                        })
+                }
+            
+
             }
             
             Text("You are completely safe.")
@@ -61,34 +80,6 @@ struct SignInScreenView: View {
             
             
         }
-    }
-}
-
-
-struct SignInButton<Content: View>: View {
-    @State private var isShowSignInView = false
-    private var destinationView: Content
-    
-    
-    init(destinationView: Content) {
-        self.destinationView = destinationView
-    }
-    
-    var body: some View {
-        
-        NavigationLink {
-            destinationView
-        } label: {
-            Text("Sign In")
-                .font(.title3)
-                .fontWeight(.bold)
-                .foregroundColor(Color("PrimaryColor2"))
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color("PrimaryColor1"))
-                .cornerRadius(50)
-        }
-        
     }
 }
 

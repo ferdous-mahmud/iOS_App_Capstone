@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct MainScreenView: View {
+    
     var body: some View {
-        Text("Main Screen")
+        Text("Main View")
+        
+        Button("Show Email"){
+          let mail = UserDefaults.standard.bool(forKey: "email")
+          print(mail)
+        }
     }
 }
 
