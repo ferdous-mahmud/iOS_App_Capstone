@@ -15,16 +15,18 @@ struct WelcomeScreenView: View {
                 .resizable()
                 .scaledToFit()
             Spacer()
-            CustomButton(title: "Get Started", PrimaryColor: "PrimaryColor1", ForegroundColor: "SecondaryColor4")
+            GetStartedButton(destinationView: MainScreenView())
                 .padding(.bottom)
-            CustomButton(title: "Login", PrimaryColor: "PrimaryColor2", ForegroundColor: "PrimaryColor1")
+            SignUpButton(destinationView: SignUpScreenView())
+                .padding(.bottom)
             HStack{
                 Text("New around here?")
-                    .font(.title3)
-                    .foregroundColor(Color("SecondaryColor4"))
-                Text("Sing in")
-                    .font(.title3)
-                    .foregroundColor(Color("PrimaryColor1"))
+                    .foregroundColor(Color("PrimaryColor2"))
+                NavigationLink(destination: SignInScreenView()) {
+                    Text("Sing in")
+                        .foregroundColor(Color("PrimaryColor1"))
+                }
+                
             }
             .padding()
         }
@@ -32,20 +34,57 @@ struct WelcomeScreenView: View {
     }
 }
 
-struct CustomButton: View {
-    var title: String
-    var PrimaryColor: String
-    var ForegroundColor: String
+struct SignUpButton<Content: View>: View {
+    @State private var isShowSignInView = false
+    private var destinationView: Content
+    
+    
+    init(destinationView: Content) {
+        self.destinationView = destinationView
+    }
     
     var body: some View {
-        Text(title)
-            .font(.title3)
-            .fontWeight(.bold)
-            .foregroundColor(Color(ForegroundColor))
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(Color(PrimaryColor))
-            .cornerRadius(50)
+        
+        NavigationLink {
+            destinationView
+        } label: {
+            Text("Sign Up")
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(Color("PrimaryColor1"))
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color("PrimaryColor2"))
+                .cornerRadius(50)
+        }
+        
+    }
+}
+
+struct GetStartedButton<Content: View>: View {
+    @State private var isShowSignInView = false
+    private var destinationView: Content
+    
+    
+    init(destinationView: Content) {
+        self.destinationView = destinationView
+    }
+    
+    var body: some View {
+        
+        NavigationLink {
+            destinationView
+        } label: {
+            Text("Get Started")
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(Color("PrimaryColor2"))
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color("PrimaryColor1"))
+                .cornerRadius(50)
+        }
+        
     }
 }
 
