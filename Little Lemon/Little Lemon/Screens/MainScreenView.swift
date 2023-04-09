@@ -14,22 +14,36 @@ struct MainScreenView: View {
     @State private var email = ""
     
     var body: some View {
-        Text("Main View")
-        
-        Spacer()
-        
-        HStack{
-            Text(firstName)
-            Text(lastName)
-        }
         VStack{
-            Text(email)
-        }
-        
-        Button("Fetch Data"){
-            firstName = UserDefaults.standard.string(forKey: "kfirstName") ?? ""
-            lastName = UserDefaults.standard.string(forKey: "klastName") ?? ""
-            email = UserDefaults.standard.string(forKey: "kemail") ?? ""
+            
+            // MARK: Header
+            HStack{
+                Spacer()
+                Image("Logo")
+                    .resizable()
+                    .frame(width: 165.00, height: 45.50, alignment: .center)
+                    .padding(.leading, 50)
+                
+                Spacer()
+                
+                Image("Profile")
+                    .resizable()
+                    .frame(width: 50.00, height: 50.00, alignment: .trailing)
+                    .padding(.trailing, 38)
+                
+            }
+            
+            Spacer()
+            
+            // MARK: Hero
+            HStack{
+                
+            }
+            
+            // MARK: Menu Breakdown
+            
+            // MARK: Food Menu List
+            
         }
     }
 }
