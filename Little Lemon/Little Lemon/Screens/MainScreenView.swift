@@ -32,13 +32,19 @@ struct MainScreenView: View {
                     .padding(.trailing, 38)
                 
             }
-            
-            Spacer()
-            
+        
             // MARK: Hero
             HStack{
-                
+                VStack{
+                    Text("Little Lemon")
+                        .font(.custom("MarkaziText-Medium", size: 64))
+                        .foregroundColor(Color("PrimaryColor1"))
+                }
             }
+            .frame(width: 428.00, height: 332.0)
+            .background(Color("PrimaryColor2"))
+            
+            Spacer()
             
             // MARK: Menu Breakdown
             

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0AB0D229E3225900798DF2 /* MarkaziText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0AB0CE29E3225900798DF2 /* MarkaziText-Bold.ttf */; };
+		0C0AB0D329E3225900798DF2 /* MarkaziText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0AB0CF29E3225900798DF2 /* MarkaziText-Medium.ttf */; };
+		0C0AB0D429E3225900798DF2 /* MarkaziText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0AB0D029E3225900798DF2 /* MarkaziText-Regular.ttf */; };
 		0C1AEBD529DCBFBF009390AC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */; };
 		0C2B604C29DDAC600091E3EE /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2B604B29DDAC600091E3EE /* WelcomeScreenView.swift */; };
 		0C2B604E29DDAD330091E3EE /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2B604D29DDAD330091E3EE /* SignInScreenView.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C0AB0CE29E3225900798DF2 /* MarkaziText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Bold.ttf"; sourceTree = "<group>"; };
+		0C0AB0CF29E3225900798DF2 /* MarkaziText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Medium.ttf"; sourceTree = "<group>"; };
+		0C0AB0D029E3225900798DF2 /* MarkaziText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Regular.ttf"; sourceTree = "<group>"; };
 		0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Little-Lemon-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0C2B604B29DDAC600091E3EE /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
@@ -79,6 +85,9 @@
 				0CC7607829D83A6300744D77 /* Little_LemonApp.swift */,
 				0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */,
 				0CC7607C29D83A6400744D77 /* Assets.xcassets */,
+				0C0AB0CE29E3225900798DF2 /* MarkaziText-Bold.ttf */,
+				0C0AB0CF29E3225900798DF2 /* MarkaziText-Medium.ttf */,
+				0C0AB0D029E3225900798DF2 /* MarkaziText-Regular.ttf */,
 				0CC7607E29D83A6400744D77 /* Preview Content */,
 			);
 			path = "Little Lemon";
@@ -151,6 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CC7608029D83A6400744D77 /* Preview Assets.xcassets in Resources */,
+				0C0AB0D329E3225900798DF2 /* MarkaziText-Medium.ttf in Resources */,
+				0C0AB0D229E3225900798DF2 /* MarkaziText-Bold.ttf in Resources */,
+				0C0AB0D429E3225900798DF2 /* MarkaziText-Regular.ttf in Resources */,
 				0CC7607D29D83A6400744D77 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +313,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Little-Lemon-Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -330,7 +341,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Little-Lemon-Info.plist";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
