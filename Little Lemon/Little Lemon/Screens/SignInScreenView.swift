@@ -11,6 +11,7 @@ struct SignInScreenView: View {
     @State private var firstName = ""
     @State private var lastName = ""
     @State private var email = ""
+    @State private var shouldNavigate = false // Keep track of whether to push MainScreenView
     
     var body: some View {
         VStack{
@@ -27,6 +28,8 @@ struct SignInScreenView: View {
                     .background(Color("BgColor"))
                     .cornerRadius(50)
                     .padding(.horizontal)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
                 
                 TextField("Last Name", text: $lastName)
                     .font(.title3)
@@ -35,6 +38,8 @@ struct SignInScreenView: View {
                     .background(Color("BgColor"))
                     .cornerRadius(50)
                     .padding(.horizontal)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
                 
                 
                 TextField("Email", text: $email)
@@ -44,31 +49,32 @@ struct SignInScreenView: View {
                     .background(Color("BgColor"))
                     .cornerRadius(50)
                     .padding(.horizontal)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+                
+                NavigationLink(
+                    destination: MainScreenView().navigationBarBackButtonHidden(true),
+                    isActive: $shouldNavigate,
+                    label: {
+                        Text("Sign In")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("PrimaryColor2"))
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color("PrimaryColor1"))
+                            .cornerRadius(50)
+                            .padding()
+                            .onTapGesture {
+                                if saveCoreData() {
+                                    shouldNavigate = true // Set shouldNavigate to true to trigger the navigation
+                                }
+                            }
+                    }
+                )
                 
                 
-//            TODO: save userDefaults when navigationlink tapped
                 
-                NavigationLink {
-                    MainScreenView()
-                } label: {
-                    Text("Sign In")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("PrimaryColor2"))
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color("PrimaryColor1"))
-                        .cornerRadius(50)
-                        .padding()
-//                        .onTapGesture(perform: {
-//                            UserDefaults.standard.set(firstName, forKey: "firstName")
-//                            UserDefaults.standard.set(lastName, forKey: "lastName")
-//                            UserDefaults.standard.set(email, forKey: "email")
-//                            print("UserDefaults Added")
-//                        })
-                }
-            
-
             }
             
             Text("You are completely safe.")
@@ -80,6 +86,31 @@ struct SignInScreenView: View {
             
             
         }
+    }
+    
+    
+    func saveCoreData() -> Bool {
+        if (firstName != "" && lastName != "" && email != ""){
+            UserDefaults.standard.set(firstName, forKey: "firstName")
+            UserDefaults.standard.set(lastName, forKey: "lastName")
+            UserDefaults.standard.set(email, forKey: "email")
+            
+            // Ignore Onboarding view when user logedIn
+            UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+            
+            print("UserDefaults Added")
+            resetTextField()
+            return true
+        } else {
+            print("All field are empty!")
+            return false
+        }
+    }
+    
+    func resetTextField() {
+        firstName = ""
+        lastName = ""
+        email = ""
     }
 }
 

@@ -12,7 +12,7 @@ struct OnboardingView: View {
     var body: some View {
         NavigationView{
             VStack {
-                WelcomeScreenView()
+                InitialScreenView()
             }
         }
     }

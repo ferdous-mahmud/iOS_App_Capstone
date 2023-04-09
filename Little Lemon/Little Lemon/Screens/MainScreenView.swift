@@ -9,12 +9,27 @@ import SwiftUI
 
 struct MainScreenView: View {
     
+    @State private var firstName = ""
+    @State private var lastName = ""
+    @State private var email = ""
+    
     var body: some View {
         Text("Main View")
         
-        Button("Show Email"){
-          let mail = UserDefaults.standard.bool(forKey: "email")
-          print(mail)
+        Spacer()
+        
+        HStack{
+            Text(firstName)
+            Text(lastName)
+        }
+        VStack{
+            Text(email)
+        }
+        
+        Button("Fetch Data"){
+            firstName = UserDefaults.standard.string(forKey: "firstName") ?? ""
+            lastName = UserDefaults.standard.string(forKey: "lastName") ?? ""
+            email = UserDefaults.standard.string(forKey: "email") ?? ""
         }
     }
 }
