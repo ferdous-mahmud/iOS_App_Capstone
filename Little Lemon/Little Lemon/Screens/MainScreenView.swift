@@ -27,9 +27,9 @@ struct MainScreenView: View {
         }
         
         Button("Fetch Data"){
-            firstName = UserDefaults.standard.string(forKey: "firstName") ?? ""
-            lastName = UserDefaults.standard.string(forKey: "lastName") ?? ""
-            email = UserDefaults.standard.string(forKey: "email") ?? ""
+            firstName = UserDefaults.standard.string(forKey: "kfirstName") ?? ""
+            lastName = UserDefaults.standard.string(forKey: "klastName") ?? ""
+            email = UserDefaults.standard.string(forKey: "kemail") ?? ""
         }
     }
 }

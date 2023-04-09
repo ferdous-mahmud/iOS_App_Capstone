@@ -91,9 +91,9 @@ struct SignInScreenView: View {
     
     func saveCoreData() -> Bool {
         if (firstName != "" && lastName != "" && email != ""){
-            UserDefaults.standard.set(firstName, forKey: "firstName")
-            UserDefaults.standard.set(lastName, forKey: "lastName")
-            UserDefaults.standard.set(email, forKey: "email")
+            UserDefaults.standard.set(firstName, forKey: "kfirstName")
+            UserDefaults.standard.set(lastName, forKey: "klastName")
+            UserDefaults.standard.set(email, forKey: "kemail")
             
             // Ignore Onboarding view when user logedIn
             UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
