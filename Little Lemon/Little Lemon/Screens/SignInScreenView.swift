@@ -51,6 +51,7 @@ struct SignInScreenView: View {
                     .padding(.horizontal)
                     .autocapitalization(.none)
                     .disableAutocorrection(true)
+                    .keyboardType(.emailAddress)
                 
                 NavigationLink(
                     destination: MainScreenView().navigationBarBackButtonHidden(true),
