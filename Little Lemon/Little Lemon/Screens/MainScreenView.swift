@@ -12,23 +12,28 @@ struct MainScreenView: View {
     @State private var selectedTab = "Home"
     
     var body: some View {
-        TabView(selection: $selectedTab) {
+        
+        if UserDefaults.standard.bool(forKey: "isUserLoggedIn") {
+            TabView(selection: $selectedTab) {
+                HomeScreenView()
+                    .onTapGesture {
+                        selectedTab = "Profile"
+                    }
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                    .tag("Home")
+                
+                ProfileScreenView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person")
+                    }
+                    .tag("Profile")
+            }
+            .accentColor(Color("PrimaryColor1"))
+        } else {
             HomeScreenView()
-                .onTapGesture {
-                    selectedTab = "Profile"
-                }
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-                .tag("Home")
-            
-            ProfileScreenView()
-                .tabItem {
-                    Label("Profile", systemImage: "person")
-                }
-                .tag("Profile")
         }
-        .accentColor(Color("PrimaryColor1"))
     }
 }
 
