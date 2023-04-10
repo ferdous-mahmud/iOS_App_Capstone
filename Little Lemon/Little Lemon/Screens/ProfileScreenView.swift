@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ProfileScreenView: View {
     
+    @State private var isShowingAlart = false
+    
     var firstName = UserDefaults.standard.string(forKey:"kfirstName") ?? ""
     var lastName = UserDefaults.standard.string(forKey:"klastName") ?? ""
     var email = UserDefaults.standard.string(forKey:"kemail") ?? ""
-
+    
     var body: some View {
         VStack{
             Image("Profile")
@@ -21,24 +23,34 @@ struct ProfileScreenView: View {
                 .padding(.top, 50)
             
             Text("\(firstName) \(lastName)")
-//            Text("Jhon Doe")
+            //            Text("Jhon Doe")
                 .bold()
                 .font(.system(size: 25))
             
             Text("\(email)")
-//            Text("example@gmail.com")
+            //            Text("example@gmail.com")
             
             Button {
-                performLogOut()
+                isShowingAlart = true
             } label: {
                 Text("Log Out")
                     .foregroundColor(.red)
                     .frame(width: 300, height: 50)
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10))
-
+                
+            }
+            .alert(isPresented: $isShowingAlart) {
+                Alert(
+                    title: Text("Are you sure you want to Log Out?"),
+                    message: Text("Force quit this app! Please login again"),
+                    primaryButton: .destructive(Text("Log Out")) {
+                        performLogOut()
+                    },
+                    secondaryButton: .cancel()
+                )
             }
             .padding(.top, 100)
-
+            
             
             Spacer()
         }
@@ -51,6 +63,9 @@ struct ProfileScreenView: View {
         UserDefaults.standard.set("", forKey: "kemail")
         
         UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+        
+        // Force Quit the app
+        exit(0)
     }
 }
 
