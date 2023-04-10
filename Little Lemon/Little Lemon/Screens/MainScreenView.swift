@@ -9,48 +9,26 @@ import SwiftUI
 
 struct MainScreenView: View {
     
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var email = ""
+    @State private var selectedTab = "Home"
     
     var body: some View {
-        VStack{
-            
-            // MARK: Header
-            HStack{
-                Spacer()
-                Image("Logo")
-                    .resizable()
-                    .frame(width: 165.00, height: 45.50, alignment: .center)
-                    .padding(.leading, 50)
-                
-                Spacer()
-                
-                Image("Profile")
-                    .resizable()
-                    .frame(width: 50.00, height: 50.00, alignment: .trailing)
-                    .padding(.trailing, 38)
-                
-            }
-        
-            // MARK: Hero
-            HStack{
-                VStack{
-                    Text("Little Lemon")
-                        .font(.custom("MarkaziText-Medium", size: 64))
-                        .foregroundColor(Color("PrimaryColor1"))
+        TabView(selection: $selectedTab) {
+            HomeScreenView()
+                .onTapGesture {
+                    selectedTab = "Profile"
                 }
-            }
-            .frame(width: 428.00, height: 332.0)
-            .background(Color("PrimaryColor2"))
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+                .tag("Home")
             
-            Spacer()
-            
-            // MARK: Menu Breakdown
-            
-            // MARK: Food Menu List
-            
+            ProfileScreenView()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+                .tag("Profile")
         }
+        .accentColor(Color("PrimaryColor1"))
     }
 }
 
