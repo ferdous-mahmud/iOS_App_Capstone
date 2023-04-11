@@ -16,9 +16,6 @@ struct MainScreenView: View {
         if UserDefaults.standard.bool(forKey: "isUserLoggedIn") {
             TabView(selection: $selectedTab) {
                 HomeScreenView()
-                    .onTapGesture {
-                        selectedTab = "Profile"
-                    }
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
