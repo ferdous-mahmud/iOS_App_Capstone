@@ -138,34 +138,15 @@ struct HomeScreenView: View {
             
             
             // MARK: Food Menu List
-            VStack{
-                HStack{
-                    VStack{
-                        // Menu Name
-                        Text("Chicago")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.custom("MarkaziText-Regular", size: 40))
-                            .foregroundColor(Color("SecondaryColor4"))
-                        
-                        // Menu Description
-                        Text("The famous greek salad of crispy lettuces, papers and more ingredient")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.custom("Karla-Medium", size: 18))
-                            .foregroundColor(Color("SecondaryColor4"))
-                        
-                        // Menu Price
-                        Text("$12.99")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.custom("Karla-Medium", size: 18))
-                            .foregroundColor(Color("SecondaryColor4"))
-                    }
-                    
-                    Image("HeroImage")
-                        .resizable()
-                        .frame(width: 142, height: 153)
+//            VStack{
+//                MenuItem(menuName: "Chicago", menuDescription: "The famous greek salad of rrispy lettuses, papers and more ingredient", price: 12.99)
+//            }
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 20) {
+                    MenuItem(menuName: "Chicago", menuDescription: "The famous greek salad of rrispy lettuses, papers and more ingredient", price: 12.99, image: "Greek salad")
+                    MenuItem(menuName: "Brushetta", menuDescription: "Our Bruschetta is made form grilled bread that has been smassed with", price: 7.99, image: "Bruschetta")
                 }
-                .padding(.leading, 25)
-                .padding(.trailing, 25)
             }
             
             Spacer()
@@ -203,5 +184,47 @@ struct Line: Shape {
         path.move(to: CGPoint(x: 0, y: 0))
         path.addLine(to: CGPoint(x: rect.width, y: 0))
         return path
+    }
+}
+
+struct MenuItem: View {
+    var menuName: String
+    var menuDescription: String
+    var price: Double
+    var image: String
+    
+    
+    var body: some View {
+        HStack{
+            VStack{
+                // Menu Name
+                Text(menuName)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Karla-Bold", size: 18))
+                    .foregroundColor(Color("SecondaryColor4"))
+                    .padding(.bottom, 1)
+                
+                // Menu Description
+                Text(menuDescription)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Karla-Regular", size: 16))
+                    .foregroundColor(Color("SecondaryColor4"))
+                
+                
+                // Menu Price
+                Text(String(format: "$%.2f", price))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.custom("Karla-Medium", size: 16))
+                    .foregroundColor(Color("SecondaryColor4"))
+                    .padding(.top, 1)
+            }
+            
+            Image(image)
+                .resizable()
+                .frame(width: 78, height: 78)
+                .padding(.top, 35)
+        }
+        .padding(.leading, 25)
+        .padding(.trailing, 25)
     }
 }
