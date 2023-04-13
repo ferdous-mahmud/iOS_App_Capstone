@@ -10,7 +10,6 @@
 		0C0AB0D229E3225900798DF2 /* MarkaziText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0AB0CE29E3225900798DF2 /* MarkaziText-Bold.ttf */; };
 		0C0AB0D329E3225900798DF2 /* MarkaziText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0AB0CF29E3225900798DF2 /* MarkaziText-Medium.ttf */; };
 		0C0AB0D429E3225900798DF2 /* MarkaziText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0AB0D029E3225900798DF2 /* MarkaziText-Regular.ttf */; };
-		0C1AEBD529DCBFBF009390AC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */; };
 		0C2B604C29DDAC600091E3EE /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2B604B29DDAC600091E3EE /* WelcomeScreenView.swift */; };
 		0C2B604E29DDAD330091E3EE /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2B604D29DDAD330091E3EE /* SignInScreenView.swift */; };
 		0C2B605029DDBCD80091E3EE /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2B604F29DDBCD80091E3EE /* MainScreenView.swift */; };
@@ -30,7 +29,6 @@
 		0C0AB0CE29E3225900798DF2 /* MarkaziText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Bold.ttf"; sourceTree = "<group>"; };
 		0C0AB0CF29E3225900798DF2 /* MarkaziText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Medium.ttf"; sourceTree = "<group>"; };
 		0C0AB0D029E3225900798DF2 /* MarkaziText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Regular.ttf"; sourceTree = "<group>"; };
-		0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Little-Lemon-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0C2B604B29DDAC600091E3EE /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		0C2B604D29DDAD330091E3EE /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
@@ -59,18 +57,118 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C2B604A29DDAC350091E3EE /* Screens */ = {
+		0C6D4E3829E808A500271107 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0C6D4E3929E808BC00271107 /* Custom Fonts */,
+				0CC7607C29D83A6400744D77 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0C6D4E3929E808BC00271107 /* Custom Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0CB4764A29E6C0E90073EAFE /* Karla-Medium.ttf */,
+				0CB4764E29E6E56A0073EAFE /* Karla-Bold.ttf */,
+				0CB4764C29E6CA970073EAFE /* Karla-ExtraBold.ttf */,
+				0C0AB0CE29E3225900798DF2 /* MarkaziText-Bold.ttf */,
+				0C0AB0CF29E3225900798DF2 /* MarkaziText-Medium.ttf */,
+				0C0AB0D029E3225900798DF2 /* MarkaziText-Regular.ttf */,
+			);
+			path = "Custom Fonts";
+			sourceTree = "<group>";
+		};
+		0C6D4E3A29E8091D00271107 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0C6D4E3B29E8092500271107 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C6D4E4429E80C1400271107 /* Initial */,
+				0C6D4E4329E80BF500271107 /* Welcome */,
+				0C6D4E4229E80B7E00271107 /* Sign Up */,
+				0C6D4E4129E80B2600271107 /* Main */,
+				0C6D4E4029E80AE500271107 /* Sing In */,
+				0C6D4E3F29E80AD800271107 /* Profile */,
+				0C6D4E3E29E80ABF00271107 /* Home */,
+				0CC7607829D83A6300744D77 /* Little_LemonApp.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C6D4E3C29E8092E00271107 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0C6D4E3D29E8093F00271107 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C6D4E3E29E80ABF00271107 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0CF53AD529E45B4000A47555 /* HomeScreenView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0C6D4E3F29E80AD800271107 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0CF53AD729E45E7000A47555 /* ProfileScreenView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0C6D4E4029E80AE500271107 /* Sing In */ = {
+			isa = PBXGroup;
+			children = (
+				0C2B604D29DDAD330091E3EE /* SignInScreenView.swift */,
+			);
+			path = "Sing In";
+			sourceTree = "<group>";
+		};
+		0C6D4E4129E80B2600271107 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0C2B604F29DDBCD80091E3EE /* MainScreenView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0C6D4E4229E80B7E00271107 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				0C2B605129DDBD350091E3EE /* SignUpScreenView.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		0C6D4E4329E80BF500271107 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
 				0C2B604B29DDAC600091E3EE /* WelcomeScreenView.swift */,
-				0C2B604D29DDAD330091E3EE /* SignInScreenView.swift */,
-				0C2B604F29DDBCD80091E3EE /* MainScreenView.swift */,
-				0CF53AD529E45B4000A47555 /* HomeScreenView.swift */,
-				0C2B605129DDBD350091E3EE /* SignUpScreenView.swift */,
-				0CFFF2AF29E30353001E7FBC /* InitialScreenView.swift */,
-				0CF53AD729E45E7000A47555 /* ProfileScreenView.swift */,
 			);
-			path = Screens;
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		0C6D4E4429E80C1400271107 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				0CFFF2AF29E30353001E7FBC /* InitialScreenView.swift */,
+			);
+			path = Initial;
 			sourceTree = "<group>";
 		};
 		0CC7606C29D83A6300744D77 = {
@@ -92,17 +190,12 @@
 		0CC7607729D83A6300744D77 /* Little Lemon */ = {
 			isa = PBXGroup;
 			children = (
-				0C2B604A29DDAC350091E3EE /* Screens */,
+				0C6D4E3A29E8091D00271107 /* Models */,
+				0C6D4E3B29E8092500271107 /* Views */,
+				0C6D4E3C29E8092E00271107 /* View Controllers */,
+				0C6D4E3829E808A500271107 /* Assets */,
 				0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */,
-				0CC7607829D83A6300744D77 /* Little_LemonApp.swift */,
-				0C1AEBD429DCBFBF009390AC /* OnboardingView.swift */,
-				0CC7607C29D83A6400744D77 /* Assets.xcassets */,
-				0CB4764A29E6C0E90073EAFE /* Karla-Medium.ttf */,
-				0CB4764E29E6E56A0073EAFE /* Karla-Bold.ttf */,
-				0CB4764C29E6CA970073EAFE /* Karla-ExtraBold.ttf */,
-				0C0AB0CE29E3225900798DF2 /* MarkaziText-Bold.ttf */,
-				0C0AB0CF29E3225900798DF2 /* MarkaziText-Medium.ttf */,
-				0C0AB0D029E3225900798DF2 /* MarkaziText-Regular.ttf */,
+				0C6D4E3D29E8093F00271107 /* Supporting Files */,
 				0CC7607E29D83A6400744D77 /* Preview Content */,
 			);
 			path = "Little Lemon";
@@ -200,7 +293,6 @@
 				0C2B604C29DDAC600091E3EE /* WelcomeScreenView.swift in Sources */,
 				0CC7607929D83A6300744D77 /* Little_LemonApp.swift in Sources */,
 				0CF53AD829E45E7000A47555 /* ProfileScreenView.swift in Sources */,
-				0C1AEBD529DCBFBF009390AC /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
