@@ -14,6 +14,7 @@
 		0C2B604E29DDAD330091E3EE /* SignInScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2B604D29DDAD330091E3EE /* SignInScreenView.swift */; };
 		0C2B605029DDBCD80091E3EE /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2B604F29DDBCD80091E3EE /* MainScreenView.swift */; };
 		0C2B605229DDBD350091E3EE /* SignUpScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2B605129DDBD350091E3EE /* SignUpScreenView.swift */; };
+		0C6D4E4629E8100B00271107 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D4E4529E8100B00271107 /* README.md */; };
 		0CB4764B29E6C0E90073EAFE /* Karla-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4764A29E6C0E90073EAFE /* Karla-Medium.ttf */; };
 		0CB4764D29E6CA970073EAFE /* Karla-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4764C29E6CA970073EAFE /* Karla-ExtraBold.ttf */; };
 		0CB4764F29E6E56A0073EAFE /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CB4764E29E6E56A0073EAFE /* Karla-Bold.ttf */; };
@@ -34,6 +35,7 @@
 		0C2B604D29DDAD330091E3EE /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
 		0C2B604F29DDBCD80091E3EE /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		0C2B605129DDBD350091E3EE /* SignUpScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenView.swift; sourceTree = "<group>"; };
+		0C6D4E4529E8100B00271107 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0CB4764A29E6C0E90073EAFE /* Karla-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Medium.ttf"; sourceTree = "<group>"; };
 		0CB4764C29E6CA970073EAFE /* Karla-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-ExtraBold.ttf"; sourceTree = "<group>"; };
 		0CB4764E29E6E56A0073EAFE /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
@@ -96,7 +98,6 @@
 				0C6D4E4029E80AE500271107 /* Sing In */,
 				0C6D4E3F29E80AD800271107 /* Profile */,
 				0C6D4E3E29E80ABF00271107 /* Home */,
-				0CC7607829D83A6300744D77 /* Little_LemonApp.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +168,7 @@
 		0C6D4E4429E80C1400271107 /* Initial */ = {
 			isa = PBXGroup;
 			children = (
+				0CC7607829D83A6300744D77 /* Little_LemonApp.swift */,
 				0CFFF2AF29E30353001E7FBC /* InitialScreenView.swift */,
 			);
 			path = Initial;
@@ -197,6 +199,7 @@
 				0C6D4E3829E808A500271107 /* Assets */,
 				0C6D4E3D29E8093F00271107 /* Supporting Files */,
 				0CC7607E29D83A6400744D77 /* Preview Content */,
+				0C6D4E4529E8100B00271107 /* README.md */,
 			);
 			path = "Little Lemon";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				0CB4764F29E6E56A0073EAFE /* Karla-Bold.ttf in Resources */,
 				0C0AB0D229E3225900798DF2 /* MarkaziText-Bold.ttf in Resources */,
 				0C0AB0D429E3225900798DF2 /* MarkaziText-Regular.ttf in Resources */,
+				0C6D4E4629E8100B00271107 /* README.md in Resources */,
 				0CC7607D29D83A6400744D77 /* Assets.xcassets in Resources */,
 				0CB4764D29E6CA970073EAFE /* Karla-ExtraBold.ttf in Resources */,
 			);
