@@ -29,7 +29,7 @@
 		0C0AB0CE29E3225900798DF2 /* MarkaziText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Bold.ttf"; sourceTree = "<group>"; };
 		0C0AB0CF29E3225900798DF2 /* MarkaziText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Medium.ttf"; sourceTree = "<group>"; };
 		0C0AB0D029E3225900798DF2 /* MarkaziText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkaziText-Regular.ttf"; sourceTree = "<group>"; };
-		0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Little-Lemon-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Little-Lemon-Info.plist"; path = "Little Lemon/Supporting Files/Little-Lemon-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0C2B604B29DDAC600091E3EE /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		0C2B604D29DDAD330091E3EE /* SignInScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenView.swift; sourceTree = "<group>"; };
 		0C2B604F29DDBCD80091E3EE /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 		0C6D4E3D29E8093F00271107 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -194,7 +195,6 @@
 				0C6D4E3B29E8092500271107 /* Views */,
 				0C6D4E3C29E8092E00271107 /* View Controllers */,
 				0C6D4E3829E808A500271107 /* Assets */,
-				0C1AEBD629DCC1BC009390AC /* Little-Lemon-Info.plist */,
 				0C6D4E3D29E8093F00271107 /* Supporting Files */,
 				0CC7607E29D83A6400744D77 /* Preview Content */,
 			);
@@ -424,7 +424,7 @@
 				DEVELOPMENT_TEAM = R5L2HQWCVA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Little-Lemon-Info.plist";
+				INFOPLIST_FILE = "Little Lemon/Supporting Files/Little-Lemon-Info.plist";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -452,7 +452,7 @@
 				DEVELOPMENT_TEAM = R5L2HQWCVA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Little-Lemon-Info.plist";
+				INFOPLIST_FILE = "Little Lemon/Supporting Files/Little-Lemon-Info.plist";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
